@@ -1,23 +1,23 @@
-import { useContext } from "react";
-import Card from "../components/Card";
-import AppContext from "../context/Context";
+import { useContext } from 'react';
+import Card from '../components/Card';
+import AppContext from '../context/Context';
 
 function Favorites() {
-  const { favorites, onAddToFavorite } = useContext(AppContext);
+	const { favorites, onAddToFavorite } = useContext(AppContext);
 
-  return (
-    <div className="content p-40">
-      <div className="d-flex justify-between align-center mb-40">
-        <h1>Мои закладки</h1>    
-      </div>
+	return (
+		<div className='content p-40'>
+			<div className='d-flex justify-between align-center mb-40'>
+				<h1>My favorites</h1>
+			</div>
 
-      <div className="d-flex flex-wrap">
-        {favorites.map((item, index) => (
-          <Card key={index} favorited={true} onFavorite={onAddToFavorite} {...item} /> 
-        ))}
-      </div>
-    </div>
-  )
+			<div className='d-flex flex-wrap'>
+				{favorites.map((item, index) => (
+					<Card key={index} favorited={true} onFavorite={onAddToFavorite} {...item} />
+				))}
+			</div>
+		</div>
+	);
 }
 
 export default Favorites;

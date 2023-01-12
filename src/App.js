@@ -73,7 +73,7 @@ function App() {
 				setFavorites((prev) => [...prev, data]);
 			}
 		} catch (error) {
-			alert("Can't add to favorites!");
+			alert('Error');
 			console.error(error);
 		}
 	};

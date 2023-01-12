@@ -19,15 +19,15 @@ const Header = (props) => {
 						alt='logo'
 					/>
 					<div>
-						<h3 className='text-uppercase'>Shopi </h3>
-						<p className='opacity-5'>Shoe store</p>
+						<h3 className='text-uppercase'>Shopi</h3>
+						<p className='opacity-5'>Shopi store shoes</p>
 					</div>
 				</div>
 			</Link>
 			<ul className='d-flex'>
 				<li onClick={props.onClickCart} className='mr-30 cu-p'>
 					<img width={18} height={18} src='/img/cart.svg' alt='cart' />
-					<span>{totalPrice} NTD</span>
+					<span>{totalPrice} NTD.</span>
 				</li>
 				<li className='mr-20 cu-p'>
 					<Link to='/favorites'>

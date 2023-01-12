@@ -31,7 +31,7 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
 				await delay(1000);
 			}
 		} catch (error) {
-			alert("Can't place an order (");
+			alert('Error');
 		}
 		setIsLoading(false);
 	};
@@ -56,7 +56,7 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
 
 									<div className='mr-20 flex'>
 										<p className='mb-5'>{obj.title}</p>
-										<b>{obj.price} NTD</b>
+										<b>{obj.price} NTD.</b>
 									</div>
 									<img
 										onClick={() => onRemove(obj.id)}
@@ -72,12 +72,12 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
 								<li>
 									<span>Total:</span>
 									<div></div>
-									<b>{totalPrice} NTD </b>
+									<b>{totalPrice} NTD. </b>
 								</li>
 								<li>
 									<span>Tax 5%:</span>
 									<div></div>
-									<b>{(totalPrice / 100) * 5} NTD </b>
+									<b>{(totalPrice / 100) * 5} NTD. </b>
 								</li>
 							</ul>
 							<button
@@ -91,11 +91,11 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
 					</div>
 				) : (
 					<Info
-						title={isOrderComplete ? 'Order placed!' : 'Cart is empty'}
+						title={isOrderComplete ? 'Order placed!' : 'Your cart is empty!'}
 						description={
 							isOrderComplete
 								? `Your order #${orderId} will be prepared and delivered soon.`
-								: 'Choose at least one item to place an order.'
+								: 'Choose at least 1 item to place an order.'
 						}
 						image={isOrderComplete ? 'img/complete-order.jpg ' : 'img/empty-cart.jpg '}
 					/>

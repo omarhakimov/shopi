@@ -52,7 +52,10 @@ function Card({
 				<>
 					{onFavorite && (
 						<div className={styles.favorite} onClick={onClickFavorite}>
-							{isFavorite ? liked_svg() : unliked_svg()}
+							<img
+								src={isFavorite ? 'img/liked.svg' : 'img/unliked.svg'}
+								alt='Unliked'
+							/>
 						</div>
 					)}
 					<img width='100%' height={135} src={imageUrl} alt='Sneakers' />
@@ -60,7 +63,7 @@ function Card({
 					<div className='d-flex justify-between align-center'>
 						<div className='d-flex flex-column'>
 							<span>Price:</span>
-							<b>{price} NTD</b>
+							<b>{price} NTD.</b>
 						</div>
 						{onPlus && (
 							<img
